@@ -1,0 +1,628 @@
+C:\Users\Hongw\PycharmProjects\.venv\Scripts\python.exe C:\Users\Hongw\PycharmProjects\NewFL\Test.py 
+Select attack set number (1~7): 5
+Selected file: ./Processed_Datasets/Train_5.csv
+Train label distribution: {5: 350000, 0: 350000}
+Test label distribution: {0: 150000, 5: 150000}
+
+=================Direct Training==================
+-------------Model Training-------------
+X_train: (700000, 39) | y_train: (700000,)
+[codecarbon WARNING @ 19:17:45] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon INFO @ 19:17:45] [setup] RAM Tracking...
+[codecarbon INFO @ 19:17:45] [setup] CPU Tracking...
+[codecarbon WARNING @ 19:17:48] We saw that you have a 13th Gen Intel(R) Core(TM) i9-13900H but we don't know it. Please contact us.
+[codecarbon WARNING @ 19:17:48] No CPU tracking mode found. Falling back on estimation based on TDP for CPU. 
+ Windows OS detected: Please install Intel Power Gadget to measure CPU
+
+[codecarbon INFO @ 19:17:48] CPU Model on constant consumption mode: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon WARNING @ 19:17:48] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 19:17:48] [setup] GPU Tracking...
+[codecarbon INFO @ 19:17:50] Tracking Nvidia GPU via pynvml
+[codecarbon INFO @ 19:17:50] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: pynvml
+            
+[codecarbon INFO @ 19:17:50] >>> Tracker's metadata:
+[codecarbon INFO @ 19:17:50]   Platform system: Windows-10-10.0.26100-SP0
+[codecarbon INFO @ 19:17:50]   Python version: 3.10.11
+[codecarbon INFO @ 19:17:50]   CodeCarbon version: 3.0.4
+[codecarbon INFO @ 19:17:50]   Available RAM : 31.730 GB
+[codecarbon INFO @ 19:17:50]   CPU count: 20 thread(s) in 20 physical CPU(s)
+[codecarbon INFO @ 19:17:50]   CPU model: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon INFO @ 19:17:50]   GPU count: 1
+[codecarbon INFO @ 19:17:50]   GPU model: 1 x NVIDIA GeForce RTX 4060 Laptop GPU
+[codecarbon INFO @ 19:18:00] Energy consumed for RAM : 0.000049 kWh. RAM Power : 20.0 W
+[codecarbon INFO @ 19:18:00] Delta energy consumed for CPU with constant : 0.000103 kWh, power : 42.5 W
+[codecarbon INFO @ 19:18:00] Energy consumed for All CPU : 0.000103 kWh
+[codecarbon INFO @ 19:18:00] Energy consumed for all GPUs : 0.000008 kWh. Total GPU Power : 3.1475375480364876 W
+[codecarbon INFO @ 19:18:00] 0.000159 kWh of electricity used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 8.756299s
+Energy Consumed: 0.000159kWh
+COâ‚‚ Emission: 0.000109kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Output_5\LightGBM_D_5.pkl | size 8038.63 KB
+
+-------------Model Testing--------------
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.85      0.86      0.85    150000
+           1       0.86      0.85      0.85    150000
+
+    accuracy                           0.85    300000
+   macro avg       0.85      0.85      0.85    300000
+weighted avg       0.85      0.85      0.85    300000
+
+Confusion Matrix:
+ [[128591  21409]
+ [ 22717 127283]]
+====================
+Accuracy:  0.852913
+Precision: 0.856018
+Recall:    0.848553
+F1 Score:  0.852269
+AUC:       0.930378
+====================
+Predicted 300000 samples in 0.5979 sec, ~501767 samples/s
+-----------Testing Completed------------
+
+Load Global Configuration models:
+Loaded Global: top-20 features, PCA-> 9 dims, optimal_k=13.
+
+=============== Feature Selection ================
+[codecarbon WARNING @ 19:18:01] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon INFO @ 19:18:01] [setup] RAM Tracking...
+[codecarbon INFO @ 19:18:01] [setup] CPU Tracking...
+After MI top-20 features: train (700000, 20)
+-------------Model Training-------------
+X_train: (700000, 20) | y_train: (700000,)
+[codecarbon WARNING @ 19:18:04] We saw that you have a 13th Gen Intel(R) Core(TM) i9-13900H but we don't know it. Please contact us.
+[codecarbon WARNING @ 19:18:04] No CPU tracking mode found. Falling back on estimation based on TDP for CPU. 
+ Windows OS detected: Please install Intel Power Gadget to measure CPU
+
+[codecarbon INFO @ 19:18:04] CPU Model on constant consumption mode: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon WARNING @ 19:18:04] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 19:18:04] [setup] GPU Tracking...
+[codecarbon INFO @ 19:18:04] Tracking Nvidia GPU via pynvml
+[codecarbon INFO @ 19:18:05] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: pynvml
+            
+[codecarbon INFO @ 19:18:05] >>> Tracker's metadata:
+[codecarbon INFO @ 19:18:05]   Platform system: Windows-10-10.0.26100-SP0
+[codecarbon INFO @ 19:18:05]   Python version: 3.10.11
+[codecarbon INFO @ 19:18:05]   CodeCarbon version: 3.0.4
+[codecarbon INFO @ 19:18:05]   Available RAM : 31.730 GB
+[codecarbon INFO @ 19:18:05]   CPU count: 20 thread(s) in 20 physical CPU(s)
+[codecarbon INFO @ 19:18:05]   CPU model: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon INFO @ 19:18:05]   GPU count: 1
+[codecarbon INFO @ 19:18:05]   GPU model: 1 x NVIDIA GeForce RTX 4060 Laptop GPU
+[codecarbon WARNING @ 19:18:06] Unable to access geographical location through primary API. Will resort to using the backup API - Exception : HTTPSConnectionPool(host='get.geojs.io', port=443): Read timed out. (read timeout=0.5) - url=https://get.geojs.io/v1/ip/geo.json
+[codecarbon WARNING @ 19:18:07] Unable to access geographical location. Using 'Canada' as the default value - Exception : HTTPSConnectionPool(host='ip-api.com', port=443): Read timed out. (read timeout=0.5) - url=https://get.geojs.io/v1/ip/geo.json
+[codecarbon INFO @ 19:18:12] Energy consumed for RAM : 0.000026 kWh. RAM Power : 20.0 W
+[codecarbon INFO @ 19:18:12] Delta energy consumed for CPU with constant : 0.000054 kWh, power : 42.5 W
+[codecarbon INFO @ 19:18:12] Energy consumed for All CPU : 0.000054 kWh
+[codecarbon INFO @ 19:18:12] Energy consumed for all GPUs : 0.000014 kWh. Total GPU Power : 11.059736358937638 W
+[codecarbon INFO @ 19:18:12] 0.000094 kWh of electricity used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 4.595288s
+Energy Consumed: 0.000094kWh
+COâ‚‚ Emission: 0.000000kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Output_5\LightGBM_FS_5.pkl | size 7991.68 KB
+
+-------------Model Testing--------------
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.84      0.84      0.84    150000
+           1       0.84      0.84      0.84    150000
+
+    accuracy                           0.84    300000
+   macro avg       0.84      0.84      0.84    300000
+weighted avg       0.84      0.84      0.84    300000
+
+Confusion Matrix:
+ [[126218  23782]
+ [ 24446 125554]]
+====================
+Accuracy:  0.839240
+Precision: 0.840748
+Recall:    0.837027
+F1 Score:  0.838883
+AUC:       0.919974
+====================
+Predicted 300000 samples in 0.5842 sec, ~513532 samples/s
+-----------Testing Completed------------
+
+============== Dimension Reduction ===============
+[codecarbon WARNING @ 19:18:13] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon INFO @ 19:18:13] [setup] RAM Tracking...
+[codecarbon INFO @ 19:18:13] [setup] CPU Tracking...
+PCA reduced to 9 dims.
+-------------Model Training-------------
+X_train: (700000, 9) | y_train: (700000,)
+[codecarbon WARNING @ 19:18:16] We saw that you have a 13th Gen Intel(R) Core(TM) i9-13900H but we don't know it. Please contact us.
+[codecarbon WARNING @ 19:18:16] No CPU tracking mode found. Falling back on estimation based on TDP for CPU. 
+ Windows OS detected: Please install Intel Power Gadget to measure CPU
+
+[codecarbon INFO @ 19:18:16] CPU Model on constant consumption mode: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon WARNING @ 19:18:16] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 19:18:16] [setup] GPU Tracking...
+[codecarbon INFO @ 19:18:16] Tracking Nvidia GPU via pynvml
+[codecarbon INFO @ 19:18:16] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: pynvml
+            
+[codecarbon INFO @ 19:18:16] >>> Tracker's metadata:
+[codecarbon INFO @ 19:18:16]   Platform system: Windows-10-10.0.26100-SP0
+[codecarbon INFO @ 19:18:16]   Python version: 3.10.11
+[codecarbon INFO @ 19:18:16]   CodeCarbon version: 3.0.4
+[codecarbon INFO @ 19:18:16]   Available RAM : 31.730 GB
+[codecarbon INFO @ 19:18:16]   CPU count: 20 thread(s) in 20 physical CPU(s)
+[codecarbon INFO @ 19:18:16]   CPU model: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon INFO @ 19:18:16]   GPU count: 1
+[codecarbon INFO @ 19:18:16]   GPU model: 1 x NVIDIA GeForce RTX 4060 Laptop GPU
+
+*****************************
+Resource Usage:
+Execution Time: 3.290682s
+Energy Consumed: 0.000081kWh
+COâ‚‚ Emission: 0.000055kg
+*****************************
+
+-----------Training Completed-----------
+[codecarbon INFO @ 19:18:21] Energy consumed for RAM : 0.000020 kWh. RAM Power : 20.0 W
+[codecarbon INFO @ 19:18:21] Delta energy consumed for CPU with constant : 0.000043 kWh, power : 42.5 W
+[codecarbon INFO @ 19:18:21] Energy consumed for All CPU : 0.000043 kWh
+[codecarbon INFO @ 19:18:21] Energy consumed for all GPUs : 0.000018 kWh. Total GPU Power : 17.43938057043843 W
+[codecarbon INFO @ 19:18:21] 0.000081 kWh of electricity used since the beginning.
+Model saved: Output_5\LightGBM_DR_5.pkl | size 7925.58 KB
+
+-------------Model Testing--------------
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.80      0.80      0.80    150000
+           1       0.80      0.80      0.80    150000
+
+    accuracy                           0.80    300000
+   macro avg       0.80      0.80      0.80    300000
+weighted avg       0.80      0.80      0.80    300000
+
+Confusion Matrix:
+ [[120103  29897]
+ [ 29365 120635]]
+====================
+Accuracy:  0.802460
+Precision: 0.801391
+Recall:    0.804233
+F1 Score:  0.802810
+AUC:       0.889602
+====================
+Predicted 300000 samples in 0.5827 sec, ~514869 samples/s
+-----------Testing Completed------------
+
+============= Clustering Compression =============
+Ratio 90%: selected 629994 / 700000 samples.
+-------------Model Training-------------
+X_train: (629994, 9) | y_train: (629994,)
+[codecarbon WARNING @ 19:18:22] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon INFO @ 19:18:22] [setup] RAM Tracking...
+[codecarbon INFO @ 19:18:22] [setup] CPU Tracking...
+[codecarbon WARNING @ 19:18:25] We saw that you have a 13th Gen Intel(R) Core(TM) i9-13900H but we don't know it. Please contact us.
+[codecarbon WARNING @ 19:18:25] No CPU tracking mode found. Falling back on estimation based on TDP for CPU. 
+ Windows OS detected: Please install Intel Power Gadget to measure CPU
+
+[codecarbon INFO @ 19:18:25] CPU Model on constant consumption mode: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon WARNING @ 19:18:25] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 19:18:25] [setup] GPU Tracking...
+[codecarbon INFO @ 19:18:25] Tracking Nvidia GPU via pynvml
+[codecarbon INFO @ 19:18:26] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: pynvml
+            
+[codecarbon INFO @ 19:18:26] >>> Tracker's metadata:
+[codecarbon INFO @ 19:18:26]   Platform system: Windows-10-10.0.26100-SP0
+[codecarbon INFO @ 19:18:26]   Python version: 3.10.11
+[codecarbon INFO @ 19:18:26]   CodeCarbon version: 3.0.4
+[codecarbon INFO @ 19:18:26]   Available RAM : 31.730 GB
+[codecarbon INFO @ 19:18:26]   CPU count: 20 thread(s) in 20 physical CPU(s)
+[codecarbon INFO @ 19:18:26]   CPU model: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon INFO @ 19:18:26]   GPU count: 1
+[codecarbon INFO @ 19:18:26]   GPU model: 1 x NVIDIA GeForce RTX 4060 Laptop GPU
+
+*****************************
+Resource Usage:
+Execution Time: 2.955407s
+Energy Consumed: 0.000065kWh
+COâ‚‚ Emission: 0.000044kg
+*****************************
+
+-----------Training Completed-----------
+[codecarbon INFO @ 19:18:30] Energy consumed for RAM : 0.000016 kWh. RAM Power : 20.0 W
+[codecarbon INFO @ 19:18:30] Delta energy consumed for CPU with constant : 0.000035 kWh, power : 42.5 W
+[codecarbon INFO @ 19:18:30] Energy consumed for All CPU : 0.000035 kWh
+[codecarbon INFO @ 19:18:30] Energy consumed for all GPUs : 0.000013 kWh. Total GPU Power : 16.118508676773743 W
+[codecarbon INFO @ 19:18:30] 0.000065 kWh of electricity used since the beginning.
+Model saved: Output_5\LightGBM_CL_5_90.pkl | size 7917.11 KB
+
+-------------Model Testing--------------
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.80      0.80      0.80    150000
+           1       0.80      0.80      0.80    150000
+
+    accuracy                           0.80    300000
+   macro avg       0.80      0.80      0.80    300000
+weighted avg       0.80      0.80      0.80    300000
+
+Confusion Matrix:
+ [[119309  30691]
+ [ 29620 120380]]
+====================
+Accuracy:  0.798963
+Precision: 0.796844
+Recall:    0.802533
+F1 Score:  0.799678
+AUC:       0.885356
+====================
+Predicted 300000 samples in 0.5867 sec, ~511317 samples/s
+-----------Testing Completed------------
+Ratio 80%: selected 559995 / 700000 samples.
+-------------Model Training-------------
+X_train: (559995, 9) | y_train: (559995,)
+[codecarbon WARNING @ 19:18:31] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon INFO @ 19:18:31] [setup] RAM Tracking...
+[codecarbon INFO @ 19:18:31] [setup] CPU Tracking...
+[codecarbon WARNING @ 19:18:34] We saw that you have a 13th Gen Intel(R) Core(TM) i9-13900H but we don't know it. Please contact us.
+[codecarbon WARNING @ 19:18:34] No CPU tracking mode found. Falling back on estimation based on TDP for CPU. 
+ Windows OS detected: Please install Intel Power Gadget to measure CPU
+
+[codecarbon INFO @ 19:18:34] CPU Model on constant consumption mode: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon WARNING @ 19:18:34] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 19:18:34] [setup] GPU Tracking...
+[codecarbon INFO @ 19:18:34] Tracking Nvidia GPU via pynvml
+[codecarbon INFO @ 19:18:34] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: pynvml
+            
+[codecarbon INFO @ 19:18:34] >>> Tracker's metadata:
+[codecarbon INFO @ 19:18:34]   Platform system: Windows-10-10.0.26100-SP0
+[codecarbon INFO @ 19:18:34]   Python version: 3.10.11
+[codecarbon INFO @ 19:18:34]   CodeCarbon version: 3.0.4
+[codecarbon INFO @ 19:18:34]   Available RAM : 31.730 GB
+[codecarbon INFO @ 19:18:34]   CPU count: 20 thread(s) in 20 physical CPU(s)
+[codecarbon INFO @ 19:18:34]   CPU model: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon INFO @ 19:18:34]   GPU count: 1
+[codecarbon INFO @ 19:18:34]   GPU model: 1 x NVIDIA GeForce RTX 4060 Laptop GPU
+[codecarbon WARNING @ 19:18:35] Unable to access geographical location through primary API. Will resort to using the backup API - Exception : HTTPSConnectionPool(host='get.geojs.io', port=443): Read timed out. (read timeout=0.5) - url=https://get.geojs.io/v1/ip/geo.json
+[codecarbon WARNING @ 19:18:36] Unable to access geographical location. Using 'Canada' as the default value - Exception : HTTPSConnectionPool(host='ip-api.com', port=443): Read timed out. (read timeout=0.5) - url=https://get.geojs.io/v1/ip/geo.json
+[codecarbon INFO @ 19:18:39] Energy consumed for RAM : 0.000016 kWh. RAM Power : 20.0 W
+[codecarbon INFO @ 19:18:39] Delta energy consumed for CPU with constant : 0.000034 kWh, power : 42.5 W
+[codecarbon INFO @ 19:18:39] Energy consumed for All CPU : 0.000034 kWh
+[codecarbon INFO @ 19:18:39] Energy consumed for all GPUs : 0.000012 kWh. Total GPU Power : 15.187856937336491 W
+[codecarbon INFO @ 19:18:39] 0.000062 kWh of electricity used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 2.882148s
+Energy Consumed: 0.000062kWh
+COâ‚‚ Emission: 0.000000kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Output_5\LightGBM_CL_5_80.pkl | size 7912.30 KB
+
+-------------Model Testing--------------
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.79      0.79      0.79    150000
+           1       0.79      0.79      0.79    150000
+
+    accuracy                           0.79    300000
+   macro avg       0.79      0.79      0.79    300000
+weighted avg       0.79      0.79      0.79    300000
+
+Confusion Matrix:
+ [[119103  30897]
+ [ 31266 118734]]
+====================
+Accuracy:  0.792790
+Precision: 0.793512
+Recall:    0.791560
+F1 Score:  0.792535
+AUC:       0.880020
+====================
+Predicted 300000 samples in 0.6155 sec, ~487433 samples/s
+-----------Testing Completed------------
+Ratio 60%: selected 419994 / 700000 samples.
+[codecarbon WARNING @ 19:18:40] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon INFO @ 19:18:40] [setup] RAM Tracking...
+[codecarbon INFO @ 19:18:40] [setup] CPU Tracking...
+-------------Model Training-------------
+X_train: (419994, 9) | y_train: (419994,)
+[codecarbon WARNING @ 19:18:43] We saw that you have a 13th Gen Intel(R) Core(TM) i9-13900H but we don't know it. Please contact us.
+[codecarbon WARNING @ 19:18:43] No CPU tracking mode found. Falling back on estimation based on TDP for CPU. 
+ Windows OS detected: Please install Intel Power Gadget to measure CPU
+
+[codecarbon INFO @ 19:18:43] CPU Model on constant consumption mode: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon WARNING @ 19:18:43] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 19:18:43] [setup] GPU Tracking...
+[codecarbon INFO @ 19:18:43] Tracking Nvidia GPU via pynvml
+[codecarbon INFO @ 19:18:43] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: pynvml
+            
+[codecarbon INFO @ 19:18:43] >>> Tracker's metadata:
+[codecarbon INFO @ 19:18:43]   Platform system: Windows-10-10.0.26100-SP0
+[codecarbon INFO @ 19:18:43]   Python version: 3.10.11
+[codecarbon INFO @ 19:18:43]   CodeCarbon version: 3.0.4
+[codecarbon INFO @ 19:18:43]   Available RAM : 31.730 GB
+[codecarbon INFO @ 19:18:43]   CPU count: 20 thread(s) in 20 physical CPU(s)
+[codecarbon INFO @ 19:18:43]   CPU model: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon INFO @ 19:18:43]   GPU count: 1
+[codecarbon INFO @ 19:18:43]   GPU model: 1 x NVIDIA GeForce RTX 4060 Laptop GPU
+[codecarbon INFO @ 19:18:47] Energy consumed for RAM : 0.000014 kWh. RAM Power : 20.0 W
+[codecarbon INFO @ 19:18:47] Delta energy consumed for CPU with constant : 0.000029 kWh, power : 42.5 W
+[codecarbon INFO @ 19:18:47] Energy consumed for All CPU : 0.000029 kWh
+[codecarbon INFO @ 19:18:47] Energy consumed for all GPUs : 0.000010 kWh. Total GPU Power : 14.302089590637747 W
+[codecarbon INFO @ 19:18:47] 0.000053 kWh of electricity used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 2.468099s
+Energy Consumed: 0.000053kWh
+COâ‚‚ Emission: 0.000036kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Output_5\LightGBM_CL_5_60.pkl | size 7889.86 KB
+
+-------------Model Testing--------------
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.79      0.78      0.78    150000
+           1       0.78      0.79      0.78    150000
+
+    accuracy                           0.78    300000
+   macro avg       0.78      0.78      0.78    300000
+weighted avg       0.78      0.78      0.78    300000
+
+Confusion Matrix:
+ [[117114  32886]
+ [ 32005 117995]]
+====================
+Accuracy:  0.783697
+Precision: 0.782040
+Recall:    0.786633
+F1 Score:  0.784330
+AUC:       0.868746
+====================
+Predicted 300000 samples in 0.6217 sec, ~482585 samples/s
+-----------Testing Completed------------
+Ratio 50%: selected 349997 / 700000 samples.
+-------------Model Training-------------
+X_train: (349997, 9) | y_train: (349997,)
+[codecarbon WARNING @ 19:18:48] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon INFO @ 19:18:48] [setup] RAM Tracking...
+[codecarbon INFO @ 19:18:48] [setup] CPU Tracking...
+[codecarbon WARNING @ 19:18:51] We saw that you have a 13th Gen Intel(R) Core(TM) i9-13900H but we don't know it. Please contact us.
+[codecarbon WARNING @ 19:18:51] No CPU tracking mode found. Falling back on estimation based on TDP for CPU. 
+ Windows OS detected: Please install Intel Power Gadget to measure CPU
+
+[codecarbon INFO @ 19:18:51] CPU Model on constant consumption mode: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon WARNING @ 19:18:51] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 19:18:51] [setup] GPU Tracking...
+[codecarbon INFO @ 19:18:51] Tracking Nvidia GPU via pynvml
+[codecarbon INFO @ 19:18:51] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: pynvml
+            
+[codecarbon INFO @ 19:18:51] >>> Tracker's metadata:
+[codecarbon INFO @ 19:18:51]   Platform system: Windows-10-10.0.26100-SP0
+[codecarbon INFO @ 19:18:51]   Python version: 3.10.11
+[codecarbon INFO @ 19:18:51]   CodeCarbon version: 3.0.4
+[codecarbon INFO @ 19:18:51]   Available RAM : 31.730 GB
+[codecarbon INFO @ 19:18:51]   CPU count: 20 thread(s) in 20 physical CPU(s)
+[codecarbon INFO @ 19:18:51]   CPU model: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon INFO @ 19:18:51]   GPU count: 1
+[codecarbon INFO @ 19:18:51]   GPU model: 1 x NVIDIA GeForce RTX 4060 Laptop GPU
+[codecarbon WARNING @ 19:18:52] Unable to access geographical location through primary API. Will resort to using the backup API - Exception : HTTPSConnectionPool(host='get.geojs.io', port=443): Read timed out. (read timeout=0.5) - url=https://get.geojs.io/v1/ip/geo.json
+[codecarbon WARNING @ 19:18:52] Unable to access geographical location. Using 'Canada' as the default value - Exception : HTTPSConnectionPool(host='ip-api.com', port=443): Max retries exceeded with url: /json/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001E2CB2B5FC0>, 'Connection to ip-api.com timed out. (connect timeout=0.5)')) - url=https://get.geojs.io/v1/ip/geo.json
+[codecarbon INFO @ 19:18:55] Energy consumed for RAM : 0.000014 kWh. RAM Power : 20.0 W
+[codecarbon INFO @ 19:18:55] Delta energy consumed for CPU with constant : 0.000031 kWh, power : 42.5 W
+[codecarbon INFO @ 19:18:55] Energy consumed for All CPU : 0.000031 kWh
+[codecarbon INFO @ 19:18:55] Energy consumed for all GPUs : 0.000008 kWh. Total GPU Power : 11.377044766508941 W
+[codecarbon INFO @ 19:18:55] 0.000053 kWh of electricity used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 2.589947s
+Energy Consumed: 0.000053kWh
+COâ‚‚ Emission: 0.000000kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Output_5\LightGBM_CL_5_50.pkl | size 7881.35 KB
+
+-------------Model Testing--------------
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.78      0.77      0.78    150000
+           1       0.77      0.78      0.78    150000
+
+    accuracy                           0.78    300000
+   macro avg       0.78      0.78      0.78    300000
+weighted avg       0.78      0.78      0.78    300000
+
+Confusion Matrix:
+ [[115815  34185]
+ [ 32562 117438]]
+====================
+Accuracy:  0.777510
+Precision: 0.774539
+Recall:    0.782920
+F1 Score:  0.778707
+AUC:       0.861780
+====================
+Predicted 300000 samples in 0.6397 sec, ~468985 samples/s
+-----------Testing Completed------------
+Ratio 30%: selected 209993 / 700000 samples.
+-------------Model Training-------------
+X_train: (209993, 9) | y_train: (209993,)
+[codecarbon WARNING @ 19:18:56] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon INFO @ 19:18:56] [setup] RAM Tracking...
+[codecarbon INFO @ 19:18:56] [setup] CPU Tracking...
+[codecarbon WARNING @ 19:18:59] We saw that you have a 13th Gen Intel(R) Core(TM) i9-13900H but we don't know it. Please contact us.
+[codecarbon WARNING @ 19:18:59] No CPU tracking mode found. Falling back on estimation based on TDP for CPU. 
+ Windows OS detected: Please install Intel Power Gadget to measure CPU
+
+[codecarbon INFO @ 19:18:59] CPU Model on constant consumption mode: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon WARNING @ 19:18:59] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 19:18:59] [setup] GPU Tracking...
+[codecarbon INFO @ 19:18:59] Tracking Nvidia GPU via pynvml
+[codecarbon INFO @ 19:19:00] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: pynvml
+            
+[codecarbon INFO @ 19:19:00] >>> Tracker's metadata:
+[codecarbon INFO @ 19:19:00]   Platform system: Windows-10-10.0.26100-SP0
+[codecarbon INFO @ 19:19:00]   Python version: 3.10.11
+[codecarbon INFO @ 19:19:00]   CodeCarbon version: 3.0.4
+[codecarbon INFO @ 19:19:00]   Available RAM : 31.730 GB
+[codecarbon INFO @ 19:19:00]   CPU count: 20 thread(s) in 20 physical CPU(s)
+[codecarbon INFO @ 19:19:00]   CPU model: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon INFO @ 19:19:00]   GPU count: 1
+[codecarbon INFO @ 19:19:00]   GPU model: 1 x NVIDIA GeForce RTX 4060 Laptop GPU
+[codecarbon INFO @ 19:19:03] Energy consumed for RAM : 0.000012 kWh. RAM Power : 20.0 W
+[codecarbon INFO @ 19:19:03] Delta energy consumed for CPU with constant : 0.000026 kWh, power : 42.5 W
+[codecarbon INFO @ 19:19:03] Energy consumed for All CPU : 0.000026 kWh
+
+*****************************
+Resource Usage:
+Execution Time: 2.195967s
+Energy Consumed: 0.000046kWh
+COâ‚‚ Emission: 0.000032kg
+*****************************
+
+-----------Training Completed-----------
+[codecarbon INFO @ 19:19:03] Energy consumed for all GPUs : 0.000008 kWh. Total GPU Power : 13.466225808285857 W
+[codecarbon INFO @ 19:19:03] 0.000046 kWh of electricity used since the beginning.
+Model saved: Output_5\LightGBM_CL_5_30.pkl | size 7845.44 KB
+
+-------------Model Testing--------------
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.77      0.75      0.76    150000
+           1       0.75      0.77      0.76    150000
+
+    accuracy                           0.76    300000
+   macro avg       0.76      0.76      0.76    300000
+weighted avg       0.76      0.76      0.76    300000
+
+Confusion Matrix:
+ [[111829  38171]
+ [ 34133 115867]]
+====================
+Accuracy:  0.758987
+Precision: 0.752198
+Recall:    0.772447
+F1 Score:  0.762188
+AUC:       0.841800
+====================
+Predicted 300000 samples in 0.6795 sec, ~441520 samples/s
+-----------Testing Completed------------
+Ratio 10%: selected 69994 / 700000 samples.
+-------------Model Training-------------
+X_train: (69994, 9) | y_train: (69994,)
+[codecarbon WARNING @ 19:19:04] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon INFO @ 19:19:04] [setup] RAM Tracking...
+[codecarbon INFO @ 19:19:04] [setup] CPU Tracking...
+[codecarbon WARNING @ 19:19:07] We saw that you have a 13th Gen Intel(R) Core(TM) i9-13900H but we don't know it. Please contact us.
+[codecarbon WARNING @ 19:19:07] No CPU tracking mode found. Falling back on estimation based on TDP for CPU. 
+ Windows OS detected: Please install Intel Power Gadget to measure CPU
+
+[codecarbon INFO @ 19:19:07] CPU Model on constant consumption mode: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon WARNING @ 19:19:07] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 19:19:07] [setup] GPU Tracking...
+[codecarbon INFO @ 19:19:07] Tracking Nvidia GPU via pynvml
+[codecarbon INFO @ 19:19:08] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: pynvml
+            
+[codecarbon INFO @ 19:19:08] >>> Tracker's metadata:
+[codecarbon INFO @ 19:19:08]   Platform system: Windows-10-10.0.26100-SP0
+[codecarbon INFO @ 19:19:08]   Python version: 3.10.11
+[codecarbon INFO @ 19:19:08]   CodeCarbon version: 3.0.4
+[codecarbon INFO @ 19:19:08]   Available RAM : 31.730 GB
+[codecarbon INFO @ 19:19:08]   CPU count: 20 thread(s) in 20 physical CPU(s)
+[codecarbon INFO @ 19:19:08]   CPU model: 13th Gen Intel(R) Core(TM) i9-13900H
+[codecarbon INFO @ 19:19:08]   GPU count: 1
+[codecarbon INFO @ 19:19:08]   GPU model: 1 x NVIDIA GeForce RTX 4060 Laptop GPU
+[codecarbon INFO @ 19:19:10] Energy consumed for RAM : 0.000009 kWh. RAM Power : 20.0 W
+[codecarbon INFO @ 19:19:10] Delta energy consumed for CPU with constant : 0.000019 kWh, power : 42.5 W
+[codecarbon INFO @ 19:19:10] Energy consumed for All CPU : 0.000019 kWh
+
+*****************************
+Resource Usage:
+Execution Time: 1.607335s
+Energy Consumed: 0.000040kWh
+COâ‚‚ Emission: 0.000027kg
+*****************************
+
+-----------Training Completed-----------
+[codecarbon INFO @ 19:19:11] Energy consumed for all GPUs : 0.000012 kWh. Total GPU Power : 26.430620398680308 W
+[codecarbon INFO @ 19:19:11] 0.000040 kWh of electricity used since the beginning.
+Model saved: Output_5\LightGBM_CL_5_10.pkl | size 7714.14 KB
+
+-------------Model Testing--------------
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.74      0.71      0.72    150000
+           1       0.72      0.75      0.73    150000
+
+    accuracy                           0.73    300000
+   macro avg       0.73      0.73      0.73    300000
+weighted avg       0.73      0.73      0.73    300000
+
+Confusion Matrix:
+ [[106674  43326]
+ [ 38237 111763]]
+====================
+Accuracy:  0.728123
+Precision: 0.720638
+Recall:    0.745087
+F1 Score:  0.732658
+AUC:       0.806517
+====================
+Predicted 300000 samples in 0.8699 sec, ~344877 samples/s
+-----------Testing Completed------------
+
+==========================All Done==========================
+
+Process finished with exit code 0

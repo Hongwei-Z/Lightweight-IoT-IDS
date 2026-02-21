@@ -1,0 +1,10 @@
+pandas>=1.5.3
+numpy>=1.26.4
+matplotlib>=3.10.1
+psutil>=7.0.0
+scikit-learn>=1.6.1
+lightgbm>=4.6.0
+joblib>=1.4.2
+codecarbon>=3.1.0
+xgboost>=3.0.2
+catboost>=1.2.8

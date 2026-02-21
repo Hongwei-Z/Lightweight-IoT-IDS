@@ -1,0 +1,270 @@
+(.venv) raspberry3@raspberrypi:~/hongwei $ python3 client.py
+Enter client ID (1~5): 2
+
+Client 2 load labels: [0, 2, 3, 4]
+Train label distribution: {3: 350000, 0: 350000, 2: 350000, 4: 350000}
+Test label distribution: {0: 150000, 3: 150000, 4: 150000, 2: 150000}
+
+=================Direct Training==================
+-------------Model Training-------------
+X_train: (1400000, 39) | y_train: (1400000,)
+[codecarbon INFO @ 17:32:37] Energy consumed for RAM : 0.000044 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 17:32:38] Delta energy consumed for CPU with cpu_load : 0.000024 kWh, power : 11.15042616736 W
+[codecarbon INFO @ 17:32:38] Energy consumed for All CPU : 0.000188 kWh
+[codecarbon INFO @ 17:32:38] 0.000231 kWh of electricity and 0.000000 L of water were used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 53.765835s
+Energy Consumed: 0.000231kWh
+COâ‚‚ Emission: 0.000001kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Client_2_Output/LightGBM_D_2.pkl | size 135.36 KB
+
+-------------Model Testing--------------
+====================
+Accuracy:  0.999993
+Precision: 0.999990
+Recall:    0.999990
+F1 Score:  0.999990
+AUC:       0.999999
+====================
+Predicted 600000 samples in 2.3517 sec, ~255134 samples/s
+-----------Testing Completed------------
+
+Load Global Configuration models:
+Loaded Global: top-20 features, PCA-> 9 dims, optimal_k=13.
+
+=============== Feature Selection ================
+After MI top-20 features: train (1400000, 20)
+-------------Model Training-------------
+X_train: (1400000, 20) | y_train: (1400000,)
+[codecarbon INFO @ 17:33:21] Energy consumed for RAM : 0.000030 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 17:33:22] Delta energy consumed for CPU with cpu_load : 0.000017 kWh, power : 11.026392421942857 W
+[codecarbon INFO @ 17:33:22] Energy consumed for All CPU : 0.000118 kWh
+[codecarbon INFO @ 17:33:22] 0.000147 kWh of electricity and 0.000000 L of water were used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 36.554376s
+Energy Consumed: 0.000147kWh
+COâ‚‚ Emission: 0.000001kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Client_2_Output/LightGBM_FS_2.pkl | size 354.69 KB
+
+-------------Model Testing--------------
+====================
+Accuracy:  0.999992
+Precision: 0.999988
+Recall:    0.999988
+F1 Score:  0.999988
+AUC:       1.000000
+====================
+Predicted 600000 samples in 4.1854 sec, ~143354 samples/s
+-----------Testing Completed------------
+
+============== Dimension Reduction ===============
+PCA reduced to 9 dims.
+-------------Model Training-------------
+X_train: (1400000, 9) | y_train: (1400000,)
+[codecarbon INFO @ 17:34:52] Energy consumed for RAM : 0.000065 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 17:34:53] Delta energy consumed for CPU with cpu_load : 0.000013 kWh, power : 9.602301669485714 W
+[codecarbon INFO @ 17:34:53] Energy consumed for All CPU : 0.000285 kWh
+[codecarbon INFO @ 17:34:53] 0.000350 kWh of electricity and 0.000000 L of water were used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 80.977657s
+Energy Consumed: 0.000350kWh
+COâ‚‚ Emission: 0.000001kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Client_2_Output/LightGBM_DR_2.pkl | size 2554.72 KB
+
+-------------Model Testing--------------
+====================
+Accuracy:  0.999688
+Precision: 0.999619
+Recall:    0.999618
+F1 Score:  0.999618
+AUC:       0.999992
+====================
+Predicted 600000 samples in 42.5932 sec, ~14086 samples/s
+-----------Testing Completed------------
+
+============= Clustering Compression =============
+Ratio 90%: selected 1259994 / 1400000 samples.
+-------------Model Training-------------
+X_train: (1259994, 9) | y_train: (1259994,)
+[codecarbon INFO @ 17:36:27] Energy consumed for RAM : 0.000032 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 17:36:27] Delta energy consumed for CPU with cpu_load : 0.000027 kWh, power : 11.953186770399999 W
+[codecarbon INFO @ 17:36:27] Energy consumed for All CPU : 0.000144 kWh
+[codecarbon INFO @ 17:36:27] 0.000176 kWh of electricity and 0.000000 L of water were used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 39.208007s
+Energy Consumed: 0.000176kWh
+COâ‚‚ Emission: 0.000001kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Client_2_Output/LightGBM_CL_2_90.pkl | size 1817.32 KB
+
+-------------Model Testing--------------
+====================
+Accuracy:  0.997551
+Precision: 0.998326
+Recall:    0.998327
+F1 Score:  0.998326
+AUC:       0.999979
+====================
+Predicted 600000 samples in 24.3301 sec, ~24660 samples/s
+-----------Testing Completed------------
+Ratio 80%: selected 1119995 / 1400000 samples.
+-------------Model Training-------------
+X_train: (1119995, 9) | y_train: (1119995,)
+[codecarbon INFO @ 17:37:28] Energy consumed for RAM : 0.000024 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 17:37:28] Delta energy consumed for CPU with cpu_load : 0.000049 kWh, power : 12.846272650000001 W
+[codecarbon INFO @ 17:37:28] Energy consumed for All CPU : 0.000112 kWh
+[codecarbon INFO @ 17:37:28] 0.000136 kWh of electricity and 0.000000 L of water were used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 29.824684s
+Energy Consumed: 0.000136kWh
+COâ‚‚ Emission: 0.000001kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Client_2_Output/LightGBM_CL_2_80.pkl | size 1376.39 KB
+
+-------------Model Testing--------------
+====================
+Accuracy:  0.989471
+Precision: 0.990542
+Recall:    0.990473
+F1 Score:  0.990494
+AUC:       0.999729
+====================
+Predicted 600000 samples in 13.1476 sec, ~45635 samples/s
+-----------Testing Completed------------
+Ratio 60%: selected 839995 / 1400000 samples.
+-------------Model Training-------------
+X_train: (839995, 9) | y_train: (839995,)
+[codecarbon INFO @ 17:38:09] Energy consumed for RAM : 0.000017 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 17:38:09] Delta energy consumed for CPU with cpu_load : 0.000016 kWh, power : 11.349189491200004 W
+[codecarbon INFO @ 17:38:09] Energy consumed for All CPU : 0.000077 kWh
+[codecarbon INFO @ 17:38:09] 0.000094 kWh of electricity and 0.000000 L of water were used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 21.170100s
+Energy Consumed: 0.000094kWh
+COâ‚‚ Emission: 0.000000kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Client_2_Output/LightGBM_CL_2_60.pkl | size 995.89 KB
+
+-------------Model Testing--------------
+====================
+Accuracy:  0.979714
+Precision: 0.983267
+Recall:    0.983168
+F1 Score:  0.983204
+AUC:       0.999119
+====================
+Predicted 600000 samples in 11.4304 sec, ~52491 samples/s
+-----------Testing Completed------------
+Ratio 50%: selected 699996 / 1400000 samples.
+-------------Model Training-------------
+X_train: (699996, 9) | y_train: (699996,)
+[codecarbon INFO @ 17:38:41] Energy consumed for RAM : 0.000012 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 17:38:42] Delta energy consumed for CPU with cpu_load : 0.000056 kWh, power : 13.41445943392 W
+[codecarbon INFO @ 17:38:42] Energy consumed for All CPU : 0.000056 kWh
+[codecarbon INFO @ 17:38:42] 0.000068 kWh of electricity and 0.000000 L of water were used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 14.987381s
+Energy Consumed: 0.000068kWh
+COâ‚‚ Emission: 0.000000kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Client_2_Output/LightGBM_CL_2_50.pkl | size 778.30 KB
+
+-------------Model Testing--------------
+====================
+Accuracy:  0.975913
+Precision: 0.980862
+Recall:    0.980790
+F1 Score:  0.980819
+AUC:       0.998622
+====================
+Predicted 600000 samples in 7.3255 sec, ~81906 samples/s
+-----------Testing Completed------------
+Ratio 30%: selected 419995 / 1400000 samples.
+-------------Model Training-------------
+X_train: (419995, 9) | y_train: (419995,)
+[codecarbon INFO @ 17:39:04] Energy consumed for RAM : 0.000008 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 17:39:04] Delta energy consumed for CPU with cpu_load : 0.000030 kWh, power : 12.0270986512 W
+[codecarbon INFO @ 17:39:04] Energy consumed for All CPU : 0.000030 kWh
+[codecarbon INFO @ 17:39:04] 0.000038 kWh of electricity and 0.000000 L of water were used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 9.104776s
+Energy Consumed: 0.000038kWh
+COâ‚‚ Emission: 0.000000kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Client_2_Output/LightGBM_CL_2_30.pkl | size 484.25 KB
+
+-------------Model Testing--------------
+====================
+Accuracy:  0.967041
+Precision: 0.975730
+Recall:    0.975758
+F1 Score:  0.975743
+AUC:       0.997519
+====================
+Predicted 600000 samples in 8.6171 sec, ~69628 samples/s
+-----------Testing Completed------------
+Ratio 10%: selected 139994 / 1400000 samples.
+-------------Model Training-------------
+X_train: (139994, 9) | y_train: (139994,)
+[codecarbon INFO @ 17:39:21] Energy consumed for RAM : 0.000003 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 17:39:22] Delta energy consumed for CPU with cpu_load : 0.000009 kWh, power : 10.1045248 W
+[codecarbon INFO @ 17:39:22] Energy consumed for All CPU : 0.000009 kWh
+[codecarbon INFO @ 17:39:22] 0.000011 kWh of electricity and 0.000000 L of water were used since the beginning.
+
+*****************************
+Resource Usage:
+Execution Time: 3.122190s
+Energy Consumed: 0.000011kWh
+COâ‚‚ Emission: 0.000000kg
+*****************************
+
+-----------Training Completed-----------
+Model saved: Client_2_Output/LightGBM_CL_2_10.pkl | size 215.97 KB
+
+-------------Model Testing--------------
+====================
+Accuracy:  0.944448
+Precision: 0.960148
+Recall:    0.960322
+F1 Score:  0.960215
+AUC:       0.994645
+====================
+Predicted 600000 samples in 6.1707 sec, ~97233 samples/s
+-----------Testing Completed------------
+
+==========================All Done==========================
