@@ -31,17 +31,26 @@ If you use this project, please cite our paper:
 
 IEEE Citation:      
 ```text
-
+H. Zhang, D. Upadhyay, M. Zaman and S. Sampalli, "Lightweight IoT Intrusion Detection via Feature and Sample Reduction With Multi-Client Ensemble for Zero-Day Attacks," in IEEE Access, vol. 14, pp. 29764-29780, 2026, doi: 10.1109/ACCESS.2026.3665868.
 ```
 
 BibTeX: 
 ```text
+@ARTICLE{11398098,
+  author={Zhang, Hongwei and Upadhyay, Darshana and Zaman, Marzia and Sampalli, Srinivas},
+  journal={IEEE Access}, 
+  title={Lightweight IoT Intrusion Detection via Feature and Sample Reduction With Multi-Client Ensemble for Zero-Day Attacks}, 
+  year={2026},
+  volume={14},
+  number={},
+  pages={29764-29780},
+  doi={10.1109/ACCESS.2026.3665868}}
 
 ```
 
 
 Author: Hongwei Zhang
 
-Updated on 2026-02-21
+Updated on 2026-03-05
 
 EOF
